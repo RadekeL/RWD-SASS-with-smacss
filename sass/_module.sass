@@ -1,0 +1,127 @@
+// General styles
+ul
+    display: none
+    width: 70vw
+    list-style: none
+    color: black
+    li
+        width: 100%
+        +flex-property(flex,center,center,row)
+        a
+            +font-property(.9rem,'Roboto', sans-serif)
+            font-weight: bold
+    
+
+span.company
+    +font-property(1.8rem,'Goudy Bookletter 1911', serif)
+    font-weight: bold
+div.margin
+    width: $flex-basis-mobile
+article.slt
+    +flex-property(flex,center,none,column)
+
+// smallest modules
+nav 
+    +flex-property(flex,none,space-around,row) 
+    +position-property()
+    width: 100%
+    height: $nav-height
+    line-height: $nav-height           
+    i
+        line-height: $nav-height
+
+div.icon
+    +flex-property(flex,center,center,column) 
+    line-height: $section-features-height + 4
+    height: $section-features-height
+    i 
+        font-size: 2.7rem
+        padding: 2vh
+        border: 3px solid black
+        border-radius: 50%
+        color: white
+        background-color: black                      
+    i.fa-apple-alt
+        color: #6BFF6C
+    i.fa-shuttle-van
+        color: skyblue
+
+section.offert
+    h1
+        margin-bottom: 0
+
+section.contact
+    span.company
+        padding: $section-padding-bottom 0
+    p
+        width: 90%
+div.infoContact
+    +flex-property(flex,flex-start,center,column) 
+    padding-bottom: $section-padding-bottom
+    h5
+        +flex-property(flex,none,flex-start,column) 
+        width: $flex-basis-mobile
+        padding-right: 5vh
+        i
+            vertical-align: middle
+            
+article.contact
+    padding-bottom: $section-padding-bottom
+    h5
+        +flex-property(flex,center,none,row) 
+        span 
+            flex-basis: 15%
+            text-align: center
+        i
+            font-size: 1.5rem
+            vertical-align: middle
+// small wrapers in particular sections
+
+div.wraperTitle
+    +flex-property(flex,center,space-around,column)
+    flex-basis: $header-div
+    z-index: 2
+    h1
+        flex-basis: 20%
+        padding: 0
+        margin: 0
+        font-size: 1.4rem
+        color: #AEFF0D
+                
+    p
+        flex-basis: 1%
+        font-size: .9rem
+        font-weight: bold
+        color: white
+
+div.wraperExperience
+    +flex-property(flex,none,none,column) 
+    margin-top: 5vh
+    p
+        text-align: center
+
+div.wraperPricingTable
+    +flex-property(flex,center,none,column)
+    width: 65vw
+    article.slt
+        width: 95%
+        padding-bottom: $section-padding-bottom
+        border: 5px solid #F5F3EF
+        border-radius: 10%
+        margin: 5vh 0
+        h1
+            font-size: 2.4rem
+        p
+            margin-bottom: 0vh
+            line-height: 5vh
+
+div.wraperContact
+    width: 90%
+
+footer a
+    +flex-property(flex,none,center,row)
+    border: none
+    border-radius: 50%
+    i 
+        font-size: 1rem
+        padding: 1.1vh

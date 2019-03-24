@@ -1,0 +1,55 @@
+// Constants
+$nav-height: 6vh;
+$header-height: 90vh;
+$section-features-height: 16vh;
+$flex-basis-mobile: 90vw;
+$image-height: 25vh;
+$header-div: 45%
+$section-padding-bottom: 5vh
+
+
+// mixins
+
+=flex-property($flex,$positionAlign,$positionJustify,$direction)
+    display: $flex
+    align-items: $positionAlign
+    justify-content: $positionJustify
+    flex-direction: $direction
+
+=background-property($adres,$pos-x,$pos-y,$size)
+    background-image: url($adres)
+    background-position: $pos-x $pos-y
+    background-size: $size
+    background-repeat: no-repeat
+=font-property($size,$family,$family2)
+    font-size: $size
+    font-family: $family, $family2
+=position-property()
+    position: absolute
+    top: 0
+    left: 0
+
+=breakpoint($point) 
+    @if $point == desktop 
+        @media (orientation:landscape) and (min-width: 1280px) 
+            @content 
+
+    @else if $point == small-desktop
+        @media (orientation:landscape) and (min-width: 960px) 
+            @content
+
+    @else if $point == largeLandscape 
+        @media (orientation:landscape) and (min-width: 730px) 
+            @content
+
+    @else if $point == landscape 
+        @media (orientation:landscape)
+            @content
+  
+    @else if $point == tablet
+        @media (min-width: 768px)  
+            @content
+  
+    @else if $point == middlemobile 
+        @media (min-width: 600px)  
+            @content

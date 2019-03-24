@@ -1,0 +1,336 @@
+@import 'mixins'
+
+
+// base
+
+
+h1
+    +breakpoint(middlemobile)
+            +font-property(1.8rem,'Lato', sans-serif)
+    +breakpoint(landscape)
+             +font-property(1.8rem,'Lato', sans-serif)
+    +breakpoint(small-desktop)
+        +font-property(2rem,'Lato', sans-serif)
+        margin-bottom: $section-padding-bottom + 8
+    +breakpoint(desktop)
+        +font-property(2.5rem,'Lato', sans-serif)
+h3
+    +breakpoint(landscape)
+        font-size: 1.4rem
+    +breakpoint(desktop)
+        font-size: 1.8rem
+h4
+    +breakpoint(largeLandscape)
+        font-size: 1.1rem
+    +breakpoint(desktop)
+        font-size: 1.5rem
+
+h5
+    +breakpoint(middlemobile)
+        +font-property(1rem,'Poppins', sans-serif)
+    +breakpoint(landscape)
+        line-height: 9vh
+    +breakpoint(small-desktop)
+        line-height: 5vh
+    +breakpoint(desktop)
+        +font-property(1.3rem,'Poppins', sans-serif)
+p
+    +breakpoint(landscape)
+        font-size: .9rem
+        margin-bottom: $section-padding-bottom + 5
+    +breakpoint(desktop)
+        font-size: 1.2rem
+
+a
+    +breakpoint(desktop)
+        font-size: 1.2rem
+button
+    +breakpoint(landscape)
+        flex-basis: 28%
+        width: 30%
+        font-size: 1.1rem
+    +breakpoint(largeLandscape)
+        flex-basis: 19%
+        width: 25%
+    +breakpoint(small-desktop)
+        flex-basis: 15%
+        width: 21%
+        font-size: 1.3rem
+    +breakpoint(desktop)
+        flex-basis: 10%
+        width: 14%
+        font-size: 1.4rem
+    // Layout
+header
+    +breakpoint(largeLandscape)
+        +background-property("../photos/small-size/wheat.jpg",20%,15%,cover) 
+        +flex-property(flex,center,flex-end,column)
+    +breakpoint(desktop)
+        +background-property("../photos/large-size/wheat.jpg",20%,30%,cover)
+    // Module
+ul
+    +breakpoint(largeLandscape)
+        +flex-property(flex,none,none,row)
+    li
+        a
+            +breakpoint(small-desktop)
+                +font-property(1.1rem,'Roboto', sans-serif)
+            +breakpoint(desktop)
+                +font-property(1.6rem,'Roboto', sans-serif)
+        // a:hover
+        //     color: #AEFF0D
+        //     border-bottom: 3px solid white
+
+span.company
+    +breakpoint(desktop)
+        +font-property(2.5rem,'Goudy Bookletter 1911', serif)
+// div.margin
+// article.slt
+
+
+
+nav 
+    +breakpoint(landscape)
+    height: $nav-height + 10
+    line-height: $nav-height + 10
+    i
+        +breakpoint(largeLandscape)
+            font-size: 0rem
+        +breakpoint(landscape)
+            line-height: $nav-height + 10
+    a
+        +breakpoint(largeLandscape)
+            color: black
+            border-bottom: none
+
+section.contact p
+    +breakpoint(small-desktop)
+        margin-bottom: .3rem
+
+
+
+
+    
+div.icon i
+    +breakpoint(landscape)
+        font-size: 2rem 
+
+
+
+
+
+div.wraperTitle
+    +breakpoint(largeLandscape)
+        +flex-property(flex,center,flex-start,column)
+        flex-basis: $header-div + 20
+    +breakpoint(desktop)
+        flex-basis: $header-div + 12
+    h1
+        +breakpoint(landscape)
+            font-size: 1.2rem
+
+        +breakpoint(middlemobile)
+            font-size: 1.6rem
+        +breakpoint(desktop)
+            font-size: 2.5rem
+                
+    p
+        +breakpoint(landscape)
+            font-size: .8rem
+        +breakpoint(small-desktop)
+            font-size: 1rem
+        +breakpoint(desktop)
+            font-size: 1.3rem
+                
+
+div.wraperExperience
+    +breakpoint(largeLandscape)
+        +flex-property(flex,none,space-around,row) 
+    +breakpoint(desktop)
+        flex-basis: 75%
+    article
+        +breakpoint(desktop)
+            flex-basis: 30%
+
+                
+
+
+
+div.offert
+    +breakpoint(largeLandscape)
+        +flex-property(flex,none,space-around,row)
+        flex-wrap: wrap
+        width: 100%
+    +breakpoint(desktop)
+        width: 75%
+    article
+        +breakpoint(largeLandscape)
+            +flex-property(flex,none,none,column)
+            width: 34% 
+        div.image
+            +breakpoint(landscape)
+                height: $image-height + 29
+            +breakpoint(largeLandscape)
+                height: $image-height + 10
+            +breakpoint(desktop)
+                width: $image-height + 50
+                height: $image-height + 20
+    p
+        +breakpoint(largeLandscape)
+            text-ign: center
+
+// ok
+div.wraperWorkers
+    +breakpoint(small-desktop)
+        +flex-property(flex,center,none,row)
+    +breakpoint(desktop)
+        width: 75%
+    article
+        div.image
+            +breakpoint(landscape)
+                width: 80%
+                flex-basis: $image-height + 33
+            +breakpoint(desktop)
+                width: 75%
+        p        
+            +breakpoint(small-desktop)
+                width: 90%
+                text-align: center
+    article.worker1
+        div.image
+            +breakpoint(landscape)
+                +background-property("../photos/small-size/steve.jpg",50%,25%,130%)
+            +breakpoint(small-desktop)
+                +background-property("../photos/large-size/steve.jpg",65%,25%,360%)
+    article.worker2
+        div.image
+            +breakpoint(landscape)
+                +background-property("../photos/small-size/donald.jpg",80%,25%,100%)
+            +breakpoint(small-desktop)
+                +background-property("../photos/large-size/donald.jpg",90%,25%,cover)
+    article.worker3
+        div.image
+            +breakpoint(landscape)
+                +background-property("../photos/small-size/william.jpg",50%,25%,130%)
+            +breakpoint(small-desktop)
+                +background-property("../photos/large-size/william.jpg",47%,25%,300%)          
+// ok
+div.wraperGallery
+    +breakpoint(largeLandscape)
+        +flex-property(flex,none,center,row)
+        flex-wrap: wrap
+
+    .productImage
+        +breakpoint(largeLandscape)
+            width: 10%
+            flex-basis: 60%
+            height: 50vh
+        +breakpoint(landscape)
+            flex-basis: $image-height + 55
+    .productImage:nth-of-type(1)
+        breakpoint(largeLandscape)
+            flex-grow: 1
+            flex-basis: 40%
+        +breakpoint(desktop)
+            flex-grow: 1
+            flex-basis: 40%
+    .productImage:nth-of-type(3)
+        +breakpoint(largeLandscape)
+            flex-grow: 1
+        +breakpoint(desktop)
+            flex-grow: 1
+            flex-basis: 40%
+    .productImage:nth-of-type(4)
+        +breakpoint(largeLandscape)
+            flex-grow: 2
+            flex-basis: 40%
+    .productImage:nth-of-type(5)
+        +breakpoint(largeLandscape)
+            flex-grow: 2
+            flex-basis: 40%
+    .productImage:nth-of-type(6)
+        +breakpoint(largeLandscape)
+            flex-grow: 1
+            flex-basis: 40%
+        +breakpoint(landscape)
+            flex-basis: $image-height + 80
+        +breakpoint(small-desktop)
+            flex-grow: 1
+            flex-basis: 40%
+// 
+div.wraperPricingTable
+    +breakpoint(landscape)
+        width: 40vw
+    +breakpoint(largeLandscape)
+        +flex-property(flex,none,space-around,row)
+        width: 90vw
+    +breakpoint(desktop)
+        width: 75vw
+    article
+        +breakpoint(landscape)
+            padding: 7vh 0 13vh
+        +breakpoint(largeLandscape)
+            flex-basis: 30%
+        +breakpoint(small-desktop)
+            padding: 5vh 0 8vh
+        +breakpoint(desktop)
+            flex-basis: 25%
+        p:nth-of-type(4)
+            +breakpoint(landscape)
+
+div.wraperContact
+    +breakpoint(small-desktop)
+        +flex-property(flex,none,center,row)
+        flex-wrap: wrap
+
+    article
+        +breakpoint(small-desktop)
+            width: 50%
+        h1
+            +breakpoint(small-desktop)
+                margin-bottom: $section-padding-bottom - 4  
+        div
+            h5
+                +breakpoint(landscape)
+                    width: $flex-basis-mobile - 20
+                    flex-basis: 7vh
+                +breakpoint(small-desktop)
+                    width: 45vw
+                    flex-basis: 6vh
+                +breakpoint(desktop)
+                    width: 40vw
+        div.information
+            +breakpoint(small-desktop)
+                +flex-property(flex,none,flex-end,column)
+    article.contact
+        +breakpoint(small-desktop)
+            flex-basis: 100%
+                
+                
+                            
+
+
+footer a
+    
+    i
+        +breakpoint(middlemobile)
+            font-size: 1.6rem
+        +breakpoint(landscape)
+            font-size: 1.2rem
+        +breakpoint(largeLandscape)
+            font-size: 1.5rem
+
+
+
+// HOVERS
+
+nav ul li a:hover
+    color: #AEFF0D
+    border-bottom: wheat solid 1px
+button:hover
+    background-color: white
+    color: black
+
+footer a:hover
+    background-color: wheat
+     

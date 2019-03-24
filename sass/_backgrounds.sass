@@ -1,0 +1,41 @@
+div.image
+    height: $image-height + 20
+    width: 100%
+
+div.imageMeat
+    +background-property("../photos/small-size/beef.jpg",50%,50%,contain)
+div.imageVege
+    +background-property("../photos/small-size/vege.jpg",50%,50%,contain)
+div.imageRaw
+    +background-property("../photos/small-size/milk.jpg",50%,50%,contain)
+div.imageCatering
+    +background-property("../photos/small-size/catering.jpg",50%,50%,contain)
+div.imageWorker1
+    +background-property("../photos/small-size/steve.jpg",50%,25%,170%)
+div.imageWorker2
+    +background-property("../photos/small-size/donald.jpg",80%,25%,140%)
+div.imageWorker3
+    +background-property("../photos/small-size/william.jpg",50%,25%,170%)
+        
+
+div.wraperGallery
+    +flex-property(flex,center,none,column)
+    width: 100%
+
+.productImage
+    flex-basis: $image-height + 20
+    width: 100%
+.productImage:nth-of-type(1)
+    +background-property("../photos/small-size/beetroot.jpg",50%,50%,cover)
+.productImage:nth-of-type(2)
+    +background-property("../photos/small-size/carrots.jpg",50%,40%,cover)
+.productImage:nth-of-type(3)
+    +background-property("../photos/small-size/fewVege.jpg",50%,60%,cover)
+    flex-basis: $image-height + 20
+.productImage:nth-of-type(4)
+    +background-property("../photos/small-size/vege.jpg",50%,60%,cover)
+.productImage:nth-of-type(5)
+    +background-property("../photos/small-size/tomat.jpg",50%,50%,cover)
+.productImage:nth-of-type(6)
+    +background-property("../photos/small-size/fewVege2.jpg",50%,35%,cover)
+    flex-basis: $image-height + 20
